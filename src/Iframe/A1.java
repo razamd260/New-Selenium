@@ -24,7 +24,7 @@ public class A1 {
        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(15));
        wait.until(ExpectedConditions.elementToBeClickable(login));
      
-       WebElement user =driver.findElement(By.id("loginIframe"));
+       WebElement user =driver.findElement(By.name("iframeLogin"));
        driver.switchTo().frame(user);
        driver.findElement(By.id("userName")).sendKeys("ansari");
        driver.findElement(By.id("close-pop")).click();

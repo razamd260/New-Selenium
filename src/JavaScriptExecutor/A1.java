@@ -18,5 +18,6 @@ public class A1 {
     WebElement search=driver.findElement(By.id("APjFqb"));
    // js.executeScript("arguments[0].click()", search);
     js.executeScript("arguments[0].value='salman';", search);
+    
 }
 }
