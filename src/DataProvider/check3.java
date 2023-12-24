@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class DataProvider_ {
+public class check3 {
 
 	@Test(dataProvider  = "dataprovider")
 	public void test(String name, int age) {

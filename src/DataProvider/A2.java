@@ -1,43 +1,26 @@
 package DataProvider;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.locators.RelativeLocator;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class A2 {
-	
-	
-    @Test(dataProvider="dataprovider")
-	 public void datareciever(String user1,CharSequence password) {
-		 WebDriver driver=new ChromeDriver();
-		 driver.get("https://www.instagram.com");
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
-		 
-		 WebElement user=driver.findElement(By.xpath("//input[@aria-label=\"Phone number, username, or email\"]"));
-		 user.sendKeys(user1);
-		 driver.findElement(RelativeLocator.with(By.tagName("input")).below(user)).sendKeys(password);
-	    System.out.println(user.getText());
-		 driver.quit();
-    }
+public class A2 extends DataProvider2 {
 
-    @DataProvider(name="dataprovider")
-    public Object[][] sender() {
-    	Object[] [] values=new Object[2][2];
-    	
-    	values[0][0]="alinoushad";
-    	values[0][1]="alinoushad";
-    	
-    	values[1][0]="razamd260";
-    	values[1][1]="razamd260";
-    	
-    	return values;
-    }
-
-
+	@Test(dataProvider = "dataProvider")
+	public void reciever(String num,String url,String user,String password) {
+		WebDriver driver;
+		if(num.equals("1")) {
+		    driver = new ChromeDriver();
+	        driver.get(url);
+	        driver.findElement(By.name("q")).sendKeys(user);
+		}
+		else if(num.equals("2")) {
+			driver=new ChromeDriver();
+			driver.get(url);
+			driver.findElement(By.name("email")).sendKeys(user);
+			driver.findElement(By.name("pass")).sendKeys(password);
+		}
+		
+	}
 }

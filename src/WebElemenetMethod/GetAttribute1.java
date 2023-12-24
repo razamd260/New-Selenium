@@ -1,4 +1,4 @@
-package Interview;
+package WebElemenetMethod;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class getAttribute {
+public class GetAttribute1 {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "G:\\Selenium\\Set Chrome\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DataProvider.A3">
+      <class name="IretryAnalyzer1.DemoClass">
         <methods>
-          <include name="test01"/>
+          <include name="reciever"/>
         </methods>
-      </class> <!-- DataProvider.A3 -->
+      </class> <!-- IretryAnalyzer1.DemoClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
