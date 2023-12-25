@@ -5,7 +5,7 @@
     <classes>
       <class name="IretryAnalyzer1.DemoClass">
         <methods>
-          <include name="reciever"/>
+          <include name="test01"/>
         </methods>
       </class> <!-- IretryAnalyzer1.DemoClass -->
     </classes>

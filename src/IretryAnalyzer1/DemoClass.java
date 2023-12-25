@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 
 public class DemoClass {
 
-	@Test(retryAnalyzer =DemoMethod.class)
+	@Test(retryAnalyzer=DemoMethod.class)
 	public void test01() {
-		WebDriver driver=new ChromeDriver();
+		
 		Assert.assertTrue(false);
 	}
 }
