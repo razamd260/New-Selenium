@@ -195,5 +195,8 @@
 	<classpathentry kind="lib" path="C:/Users/hii/Downloads/Compressed/slf4j-api-2.0.0-beta0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hii/Downloads/Compressed/stax-ex-1.8.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hii/Downloads/Compressed/txw2-2.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hii/Downloads/ashot-1.5.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hii/Downloads/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hii/Downloads/gson-2.8.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -14,10 +14,13 @@ public class A1 {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://www.facebook.com");
 		WebElement password=driver.findElement(By.xpath("//a[text()='Forgotten password?']"));
+		System.out.println(password.getCssValue("background-color"));
+		System.out.println(password.getCssValue("color"));
+		System.out.println(password.getCssValue("background"));
 		System.out.println(password.getCssValue("font-style"));
 		System.out.println(password.getCssValue("font-size"));
-		System.out.println(password.getCssValue("color"));
-		System.out.println(password.getCssValue("background-color"));
-		System.out.println(password.getCssValue("background"));
+		System.out.println(password.getCssValue("width"));
+		System.out.println("Height : "+password.getCssValue("height"));
+	
 	}
 }

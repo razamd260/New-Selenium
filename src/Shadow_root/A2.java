@@ -11,7 +11,8 @@ public class A2 {
 		WebDriver driver = new ChromeDriver();
 		driver.get("chrome://Extensions/");
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		WebElement args1=(WebElement) js.executeScript("return document.querySelector('extensions-manager').shadowRoot.querySelector('extensions-toolbar').shadowRoot.querySelector('div.more-actions > cr-toggle#devMode')");
+		WebElement args1=(WebElement) js.
+	    executeScript("return document.querySelector('extensions-manager').shadowRoot.querySelector('extensions-toolbar').shadowRoot.querySelector('div.more-actions > cr-toggle#devMode')");
 		js.executeScript("arguments[0].click();", args1);
 	}
 }
