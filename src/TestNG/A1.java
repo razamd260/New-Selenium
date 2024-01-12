@@ -11,18 +11,13 @@ public class A1 {
   public void test1() {
 	  WebDriver driver=new EdgeDriver();
 	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
-	  driver.get("https://www.facebook.com");
+	  System.out.println("A1 ####11111 [threadNumber:-------"+Thread.currentThread().getId());
   }
 	@Test(groups="whitebox")
 	  public void test2() {
 		  WebDriver driver=new EdgeDriver();
 		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
-		  driver.get("https://www.flipkart.com");
+		  System.out.println("A1 ####2222 [threadNumber:-------"+Thread.currentThread().getId());
 	  }
-	  @Test(groups="graybox")
-	  public void test3() {
-		  WebDriver driver=new EdgeDriver();
-		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
-		  driver.get("https://www.amazon.in");
-	  }
+	 
 }

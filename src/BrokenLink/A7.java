@@ -6,6 +6,8 @@ import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import javax.net.ssl.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +26,6 @@ public class A7 {
 			try {
 				URL link=new URL(url);
 				HttpURLConnection hc=(HttpURLConnection) link.openConnection();
-				hc.setConnectTimeout(3000);
 				hc.connect();
 
 				code=hc.getResponseCode();

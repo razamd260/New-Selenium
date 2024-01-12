@@ -1,4 +1,4 @@
-package ChromeOption;
+package OptionsClass;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
