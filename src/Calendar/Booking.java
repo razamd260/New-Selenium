@@ -37,30 +37,35 @@ public class Booking {
 //		wait.until(ExpectedConditions.elementToBeClickable(departure));
 //		js.executeScript("arguments[0].click();", departure);
 		int j=1;
-			for(int i=1;i<=august;i++) {
-				if(i==1) {
-					WebElement next1=driver.findElement(By.xpath("//div[@id=\"calendar-searchboxdatepicker\"]/div/div/button"));
-					js.executeScript("arguments[0].click();", next1);
-				}
-				List<WebElement> next=driver.findElements(By.xpath("//div[@id=\"calendar-searchboxdatepicker\"]/div/div/button"));
-				for(WebElement e:next) {
-					if(j%2==0) {
-						Thread.sleep(2000);
-						js.executeScript("arguments[0].click();", e);
-						j++;
-					}else {
-						j++;
+			while(true) {
+				String year=driver.findElement(By.xpath("//h3[contains(@class,\"e1\")]")).getText();
+			    if(expectedmonthyear.equals(year)) {
+			    	WebElement day=driver.findElement(By.xpath("//span[text()='"+expectedday+"']"));
+					wait.until(ExpectedConditions.elementToBeClickable(day));
+					js.executeScript("arguments[0].click();", day);
+					break;
+			    }else {
+			    	if(j==1) {
+						WebElement next1=driver.findElement(By.xpath("//div[@id=\"calendar-searchboxdatepicker\"]/div/div/button"));
+						
+						js.executeScript("arguments[0].click();", next1);
 					}
-				}
-		  }
-				
+					List<WebElement> next=driver.findElements(By.xpath("//div[@id=\"calendar-searchboxdatepicker\"]/div/div/button"));
+					for(WebElement e:next) {
+						if(j%2==0) {
+							Thread.sleep(2000);
+							js.executeScript("arguments[0].click();", e);
+							j++;
+						}else {
+							j++;
+						}
+					}
+			    	
+			    	
+			    }
+			}
 			
-			String year=driver.findElement(By.xpath("//h3[contains(@class,\"e1\")]")).getText();
-		    if(expectedmonthyear.equals(year)) {
-		    	WebElement day=driver.findElement(By.xpath("//span[text()='"+expectedday+"']"));
-				wait.until(ExpectedConditions.elementToBeClickable(day));
-				js.executeScript("arguments[0].click();", day);
-		    }
+		
 	}
 }
 //

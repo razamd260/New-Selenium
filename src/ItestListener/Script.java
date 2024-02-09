@@ -1,4 +1,4 @@
-package ItestListener;
+ package ItestListener;
 
 
 
@@ -26,6 +26,7 @@ public class Script {
 public void test() {
 	driver.get("https://www.google.com");
 	Assert.assertTrue(false);
+	
 }
 
 @AfterMethod
